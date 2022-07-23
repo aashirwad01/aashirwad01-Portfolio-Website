@@ -1,6 +1,11 @@
+import { Box } from "@chakra-ui/layout";
+
 const Sidebar = () => {
     return (
-        <div>SideBar</div>
+        <Box position='absolute' left='50px' top='0'
+        >
+            Sidebar
+        </Box>
     )
 };
 
