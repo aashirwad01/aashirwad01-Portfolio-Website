@@ -28,7 +28,7 @@ import {
 import NextLink from 'next/link'
 import { useState } from "react";
 
-const IconMenu = [
+export const IconMenu = [
     {
         name:'Know Me',
         icon:VscFiles,
@@ -52,7 +52,7 @@ const IconMenu = [
     {
         name:'Blogs',
         icon:VscExtensions,
-        route:'/blogs'
+        route:'/'
     },
 
 ]
@@ -74,12 +74,15 @@ const BottomMenu = [
 
 
 
-const SideBorder = (sidebarOpen,setSidebarOpen) => {
-
-   
+const SideBorder = ({selected,setSelected}) => {
 
     
-
+    
+   
+    const handleClick = (name) => {
+       
+        setSelected(name !== selected ? name : "") 
+      };
 
 
 
@@ -87,14 +90,11 @@ const SideBorder = (sidebarOpen,setSidebarOpen) => {
         <Box width='100%' height='calc(100vh - 20px)' bg='sideborder.bg'>
             <Box display='flex' flexDirection='column' justifyContent='space-between'  paddingY='10px' height='100%'>
                 <Box>
-                <Center>
-                    <List onClick={()=>{
-                        setSidebarOpen(true)
-                        
-                    }} spacing={3}>
+                {/* <Center> */}
+                    <List  spacing={3}>
                         {IconMenu.map(menu => (
-                            <ListItem   key={menu.name} fontSize='25px' _active={{borderLeft:'2px solid white'}}>
-                              <LinkBox >
+                            <ListItem onClick={() => handleClick(menu.name)}  key={menu.name} fontSize='25px'    style={{borderLeft:`${selected == menu.name ?"2px solid white":""}`}}>
+                              <LinkBox paddingX='8px' >
                               <NextLink href={menu.route} passHref>
                                 <LinkOverlay  _hover={{color:'white' }} color='sideborder.icon' >
                                
@@ -106,7 +106,7 @@ const SideBorder = (sidebarOpen,setSidebarOpen) => {
                             </ListItem>
                         ))}
                     </List>
-                </Center>
+                {/* </Center> */}
                 </Box>
                 <Box>
                 <Center>

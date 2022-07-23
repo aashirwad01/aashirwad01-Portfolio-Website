@@ -48,6 +48,7 @@ const theme = extendTheme({
     },
     sidebar:{
       bg:'#252526',
+      text:'#c1c1c1',
       
     },
     bottombar:{
