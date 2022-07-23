@@ -26,7 +26,7 @@ import { Text } from '@chakra-ui/layout';
 
 // import FloxusLogo from  '../../public/favicon_floxus.png' 
 
-const ABOUT = [
+const About = [
     {
         id:1,
         heading:'Who Am I',
@@ -57,7 +57,7 @@ const ABOUT = [
 
 ]
 
-const highlightedProjects =[
+const Projects =[
     {
         id:1,
         heading:'Who Am I',
@@ -69,17 +69,42 @@ const highlightedProjects =[
     },
 ]
 
+const Blogs =[
+    {
+        id:1,
+        heading:'Who Am I',
+        line:'An Abnormly Curious Guy ',
+        lineCurrent:'Studying MnC At BIT Mesra',
+        timeline:'2018-Current',
+        tag:['Web Developer','Analyst','Coder']
+
+    },
+]
+
+
+
+
+
+
 const GettoKnowMe = () => {
 
+
+
+
     return (
-        <KnowMe/>
+        <>
+        
+        <KnowMe headname='About' loopVal={About}/>
+        <KnowMe headname='Projects' loopVal={Projects} />
+        <KnowMe headname='Blogs' loopVal={Blogs} />
+        </>
 
     )
 }
 
 
 
-const KnowMe =() => {
+const KnowMe =({headname,loopVal}) => {
 
     
 
@@ -105,7 +130,7 @@ const KnowMe =() => {
    >
    <LinkOverlay>
    <HStack >
-        {iconState?<VscChevronDown/>:<VscChevronRight/>}<Text>About</Text>
+        {iconState?<VscChevronDown/>:<VscChevronRight/>}<Text>{headname}</Text>
     </HStack>
    </LinkOverlay>
    </LinkBox>
@@ -114,7 +139,7 @@ const KnowMe =() => {
         <Box >
      <List>
         {
-            ABOUT.map((menu)=>(
+           loopVal.map((menu)=>(
                 <ListItem 
                 onClick={() => handleClick(menu.heading)}  
                 key={menu.id}
