@@ -35,9 +35,9 @@ export const IconMenu = [
         route:'/'
     },
     {
-        name:'SEARCH',
+        name:'RESUME',
         icon:VscSearch,
-        route:'/search'
+        route:'/resume'
     },
     {
         name:'GITHUB STATS',

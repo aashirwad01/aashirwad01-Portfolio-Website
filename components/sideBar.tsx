@@ -4,11 +4,42 @@ import { IconMenu } from "./sideBorder";
 import {HiOutlineDotsHorizontal} from 'react-icons/hi'
 import KnowMe from './sidebar/knowme'
 import GettoKnowMe from "./sidebar/knowme";
+import ResumeSidebar from './sidebar/resumeSidebar'
+import ProjectsSidebar from './sidebar/resumeSidebar'
+import BlogsSideBar from './sidebar/blogsSidebar'
+import GithubStatsSidebar from './sidebar/githubStatsSidebar'
 
 
 
 const Sidebar = ({selected}) => {
 
+    const toViwewinSidebar = (selected) => {
+        if(selected=='KNOW ME')
+        return (
+            <GettoKnowMe/>
+        )
+        else if(selected =='RESUME'){
+            return (
+                <ResumeSidebar/>
+            )
+        }
+        
+        else if (selected =='PROJECTS'){
+            return (
+                <ProjectsSidebar/>
+            )
+        }
+        else if (selected =='GITHUB STATS'){
+            return (
+                <GithubStatsSidebar/>
+            )
+        }
+        else if (selected =='BLOGS'){
+            return (
+                <BlogsSideBar/>
+            )
+        }
+    }
     
     return (
         <Box position='absolute' left='50px' top='0' width='200px'
@@ -26,7 +57,8 @@ const Sidebar = ({selected}) => {
                     </Box>
                     
                     <Box  paddingY='10px'>
-                      <GettoKnowMe/>
+                        
+                     {toViwewinSidebar(selected)}
 
                       </Box>
                     
