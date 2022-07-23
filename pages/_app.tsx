@@ -1,6 +1,7 @@
 import "reset-css";
 import {ChakraProvider,extendTheme} from "@chakra-ui/react"
 import PortfolioLayout from '../components/portfolioLayout';
+import "@fontsource/inconsolata";
 
 // "activityBarBadge.background": "#007acc",
 // 		"editor.background": "#1e1e1e",
@@ -23,6 +24,11 @@ import PortfolioLayout from '../components/portfolioLayout';
 // 		"tab.lastPinnedBorder": "#cccccc33",
 
 const theme = extendTheme({
+  fonts:{
+    heading:`Inconsolata[400]`,
+    body:`Inconsolata`,
+
+  },
   colors:{
     editor:{
       bg:"1e1e1e",
@@ -42,19 +48,23 @@ const theme = extendTheme({
     },
     sideborder:{
       bg:'#333333',
-      icon:'#ababab'
+      icon:'#ababab',
+      
 
 
     },
     sidebar:{
       bg:'#252526',
       text:'#c1c1c1',
+      texthov:'#474747',
+      textsel:'#01426e',
+      // textselborder:'#2fa5f5',
       
     },
     bottombar:{
-      bg:'#0099FF',
+      bg:'#027bcc',
       bgsel:'#2fa5f5',
-      text:'black'
+      text:'white'
     }
   }
 })

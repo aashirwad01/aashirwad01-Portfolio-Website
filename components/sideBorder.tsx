@@ -30,29 +30,29 @@ import { useState } from "react";
 
 export const IconMenu = [
     {
-        name:'Know Me',
+        name:'KNOW ME',
         icon:VscFiles,
         route:'/'
     },
     {
-        name:'Search',
+        name:'SEARCH',
         icon:VscSearch,
         route:'/search'
     },
     {
-        name:'Github Stats',
+        name:'GITHUB STATS',
         icon:VscSourceControl,
         route:'/githubStats'
     },
     {
-        name:'Running Projects',
+        name:'PROJECTS',
         icon:VscDebugAlt,
         route:'/projects'
     },
     {
-        name:'Blogs',
+        name:'BLOGS',
         icon:VscExtensions,
-        route:'/'
+        route:'/blogs'
     },
 
 ]
@@ -87,16 +87,16 @@ const SideBorder = ({selected,setSelected}) => {
 
 
     return (
-        <Box width='100%' height='calc(100vh - 20px)' bg='sideborder.bg'>
+        <Box width='100%' height='calc(100vh - 22px)' bg='sideborder.bg'>
             <Box display='flex' flexDirection='column' justifyContent='space-between'  paddingY='10px' height='100%'>
                 <Box>
                 {/* <Center> */}
                     <List  spacing={3}>
                         {IconMenu.map(menu => (
                             <ListItem onClick={() => handleClick(menu.name)}  key={menu.name} fontSize='25px'    style={{borderLeft:`${selected == menu.name ?"2px solid white":""}`}}>
-                              <LinkBox paddingX='8px' >
+                              <LinkBox paddingX='8px' paddingY='5px' >
                               <NextLink href={menu.route} passHref>
-                                <LinkOverlay  _hover={{color:'white' }} color='sideborder.icon' >
+                                <LinkOverlay _hover={{color:'white' }} style={{color:`${selected == menu.name ?"white":""}`}}    color='sideborder.icon' >
                                
                                 <ListIcon  as={menu.icon} color ="currentcolor" />
                                
@@ -112,7 +112,7 @@ const SideBorder = ({selected,setSelected}) => {
                 <Center>
                     <List spacing={3}>
                         {BottomMenu.map(menu => (
-                            <ListItem key={menu.name} fontSize='25px' _active={{borderLeft:'2px solid white'}}>
+                            <ListItem key={menu.name} fontSize='25px' >
                               <LinkBox>
                               <NextLink href={menu.route} passHref>
                                 <LinkOverlay _hover={{color:'white' }} color='sideborder.icon' >

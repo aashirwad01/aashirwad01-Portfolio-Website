@@ -62,7 +62,7 @@ const BottomNav2 = [
 
 const BottomBar = () => {
     return (
-        <Box height='20px' bg='bottombar.bg' width="100vw">
+        <Box height='22px' bg='bottombar.bg' width="100vw">
             <Box display='flex' flexDirection='row' justifyContent='space-between'  paddingX='10px'> 
             <Box>
                 <Center>

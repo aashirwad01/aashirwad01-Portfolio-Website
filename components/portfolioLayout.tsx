@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Box } from '@chakra-ui/layout';
-
+import { Text } from '@chakra-ui/layout';
 import Sidebar from './sideBar';
 import BottomBar from './bottomBar';
 import SideBorder from '../components/sideBorder'
@@ -19,8 +19,8 @@ const PortfolioLayout = ({children}) => {
                 
                 
             </Box>
-            <Box marginLeft={selected?'250px':'50px'} marginBottom='20px'>
-                    {children}
+            <Box marginLeft={selected?'250px':'50px'} marginBottom='22px'>
+                 {children}
 
                 </Box>
         <Box position="absolute" left="0" bottom="0">
