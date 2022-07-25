@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/layout'
 import Head from 'next/head'
 import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
@@ -68,7 +69,13 @@ export default function Home() {
     //   </footer>
     // </div>
     
-    <div>Home</div>
+
+    <Box 
+    // style={{ backgroundImage:`linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),url("./editorbg.png")`  }}
+    >
+      
+      Home
+      </Box>
 
   )
 }

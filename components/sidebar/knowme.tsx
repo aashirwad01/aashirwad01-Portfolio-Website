@@ -60,7 +60,7 @@ const About = [
 const Projects =[
     {
         id:1,
-        heading:'Who Am I',
+        heading:'Who',
         line:'An Abnormly Curious Guy ',
         lineCurrent:'Studying MnC At BIT Mesra',
         timeline:'2018-Current',
@@ -72,7 +72,7 @@ const Projects =[
 const Blogs =[
     {
         id:1,
-        heading:'Who Am I',
+        heading:'Who Am',
         line:'An Abnormly Curious Guy ',
         lineCurrent:'Studying MnC At BIT Mesra',
         timeline:'2018-Current',
@@ -88,26 +88,6 @@ const Blogs =[
 
 const GettoKnowMe = () => {
 
-
-
-
-    return (
-        <>
-        
-        <KnowMe headname='About' loopVal={About}/>
-        <KnowMe headname='Projects' loopVal={Projects} />
-        <KnowMe headname='Blogs' loopVal={Blogs} />
-        </>
-
-    )
-}
-
-
-
-const KnowMe =({headname,loopVal}) => {
-
-    
-
     const [selected,setSelected]=useState('')
 
     const handleClick = (heading) => {
@@ -115,22 +95,43 @@ const KnowMe =({headname,loopVal}) => {
         setSelected(heading !== selected ? heading : "") 
       };
 
-    const [iconState,setIcon]=useState(false)
+    const [iconState,setIcon]=useState(true)
 
        
+
+
+
+    return (
+        <>
+        
+        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick} iconState={iconState} setIcon={setIcon} headname='About' loopVal={About}/>
+        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick} iconState={iconState} setIcon={setIcon} headname='Projects' loopVal={Projects} />
+        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick} iconState={iconState} setIcon={setIcon} headname='Blogs' loopVal={Blogs} />
+        </>
+
+    )
+}
+
+
+
+const KnowMe =({setSelected,selected,handleClick,iconState,setIcon,headname,loopVal}) => {
+
+    
+
+    
 
     return (
    <Box>  
    <LinkBox _hover={{bg:`${iconState?'':'sidebar.texthov'}`}} onClick={()=>{
     setIcon(!(iconState))
-    setSelected('')
+    setSelected={setSelected}
    
-}} border={iconState && !(selected)?`1px solid #2fa5f5`:''}  
+}} border={iconState && !(selected)?`1px solid #40a7ed`:''}  
 
    >
    <LinkOverlay>
    <HStack >
-        {iconState?<VscChevronDown/>:<VscChevronRight/>}<Text>{headname}</Text>
+        {iconState?<VscChevronDown/>:<VscChevronRight/>}<Text fontSize='18px'>{headname}</Text>
     </HStack>
    </LinkOverlay>
    </LinkBox>
@@ -149,7 +150,7 @@ const KnowMe =({headname,loopVal}) => {
                 >
                               <LinkBox 
                            
-                              border={selected == menu.heading ?`1px solid #2fa5f5`:""}
+                              border={selected == menu.heading ?`1px solid #40a7ed`:""}
                               bg={selected == menu.heading ?`sidebar.textsel`:""}  paddingX='15px'  >
                               
                                 <LinkOverlay  

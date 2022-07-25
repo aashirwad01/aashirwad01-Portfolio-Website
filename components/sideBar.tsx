@@ -5,7 +5,7 @@ import {HiOutlineDotsHorizontal} from 'react-icons/hi'
 import KnowMe from './sidebar/knowme'
 import GettoKnowMe from "./sidebar/knowme";
 import ResumeSidebar from './sidebar/resumeSidebar'
-import ProjectsSidebar from './sidebar/resumeSidebar'
+import ProjectsSidebar from './sidebar/projectsSidebar'
 import BlogsSideBar from './sidebar/blogsSidebar'
 import GithubStatsSidebar from './sidebar/githubStatsSidebar'
 
@@ -18,17 +18,18 @@ const Sidebar = ({selected}) => {
         return (
             <GettoKnowMe/>
         )
+        else if (selected =='PROJECTS'){
+            return (
+                <ProjectsSidebar/>
+            )
+        }
         else if(selected =='RESUME'){
             return (
                 <ResumeSidebar/>
             )
         }
         
-        else if (selected =='PROJECTS'){
-            return (
-                <ProjectsSidebar/>
-            )
-        }
+        
         else if (selected =='GITHUB STATS'){
             return (
                 <GithubStatsSidebar/>

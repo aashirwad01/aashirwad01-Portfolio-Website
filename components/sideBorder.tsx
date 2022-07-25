@@ -35,25 +35,27 @@ export const IconMenu = [
         route:'/'
     },
     {
-        name:'RESUME',
+        name:'PROJECTS',
+        icon:VscExtensions,
+        route:'/projects'
+    },
+    {
+        name:'BLOGS',
         icon:VscSearch,
-        route:'/resume'
+        route:'/blogs'
     },
     {
         name:'GITHUB STATS',
         icon:VscSourceControl,
         route:'/githubStats'
     },
+    
     {
-        name:'PROJECTS',
+        name:'RESUME',
         icon:VscDebugAlt,
-        route:'/projects'
+        route:'/resume'
     },
-    {
-        name:'BLOGS',
-        icon:VscExtensions,
-        route:'/blogs'
-    },
+    
 
 ]
 

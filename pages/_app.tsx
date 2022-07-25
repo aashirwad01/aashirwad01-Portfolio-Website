@@ -23,7 +23,11 @@ import "@fontsource/inconsolata";
 // 		"statusBarItem.remoteForeground": "#ffffff",
 // 		"tab.lastPinnedBorder": "#cccccc33",
 
+
+
+
 const theme = extendTheme({
+  
   fonts:{
     heading:`Inconsolata[400]`,
     body:`Inconsolata`,
@@ -58,6 +62,7 @@ const theme = extendTheme({
       text:'#c1c1c1',
       texthov:'#474747',
       textsel:'#01426e',
+
       // textselborder:'#2fa5f5',
       
     },
@@ -65,6 +70,18 @@ const theme = extendTheme({
       bg:'#027bcc',
       bgsel:'#2fa5f5',
       text:'white'
+    },
+    searchSidebar:{
+      bg:'#403f3f',
+      text:'white',
+      pholder:'#c1c1c1',
+      sel:'#01426e'
+
+    },
+    projectsSidebar:{
+      text:'white',
+      text3line:'white',
+      text2line:'#c1c1c1',
     }
   }
 })
