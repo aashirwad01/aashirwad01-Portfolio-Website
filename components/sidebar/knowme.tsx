@@ -60,25 +60,47 @@ const About = [
 const Projects =[
     {
         id:1,
-        heading:'Who',
-        line:'An Abnormly Curious Guy ',
-        lineCurrent:'Studying MnC At BIT Mesra',
-        timeline:'2018-Current',
-        tag:['Web Developer','Analyst','Coder']
+        heading:'CodeEditor',
+        line:'React based CodeEditor with design using Figma and implemented using MUIv5 incorporating theme changeand other design principles.Used Monacio Editor by Microsoft to implement code editor features and incorportated 5 languages with intellisense support in Javascript.Using Axios to fetch results from Judge0 server API for code review and code compilation.',
+        lineCurrent:'React,Material UI, Axios,Judge0, Monaco Editor',
+        timeline:'',
+        tag:''
 
     },
+    {
+        id:2,
+        heading:'Shopify Project',
+        line:'Managed and Collaborated on Shopify E Commerce WebApp for client incorporating UI/UX practices and E-Commerce features.',
+        lineCurrent:'Shopify,Liquid,HTML,CSS and UI/UX Design Principles',
+        timeline:'',
+        tag:'Shopify,Liquid,HTML,CSS and UI/UX Design Principles',
+
+    },
+    
+    
 ]
 
 const Blogs =[
-    {
+   
+     {
         id:1,
-        heading:'Who Am',
-        line:'An Abnormly Curious Guy ',
-        lineCurrent:'Studying MnC At BIT Mesra',
-        timeline:'2018-Current',
-        tag:['Web Developer','Analyst','Coder']
+        heading:"What is WebPack?",
+        line:'WebPack, Modules, Javascript ',
+        lineCurrent:"Why WebPack?🕸️\nWhat problem does it solve?🧐\nIn its broadest definition: WebPack is a bundler, a module bundler. 😼\nWhat it basically does is bundles all assets and files. 💪\nTo understand why WebPack is necessary, it is important to know How was Ja...",
+        timeline:"2022-07-27T07:44:26.565Z",
+        tag:''
 
     },
+    {
+        id:2,
+        heading:"Theming in MUI v5",
+        line:'MUI, React',
+        lineCurrent:"Material-UI is now MUI! 🤩\nIf you are following Frontend for some time you might already know the migration of Material UI brand to MUI.\nAnd Yes! I am copying the direct heading from the announcement made by the team behind MUI on 16 Sept 2021 of a n...",
+        timeline:"2022-07-27T07:44:26.565Z",
+        tag:''
+
+    },
+    
 ]
 
 
@@ -95,7 +117,8 @@ const GettoKnowMe = () => {
         setSelected(heading !== selected ? heading : "") 
       };
 
-    const [iconState,setIcon]=useState(true)
+  
+    const [borderId,setBorderId]=useState('About')
 
        
 
@@ -104,9 +127,9 @@ const GettoKnowMe = () => {
     return (
         <>
         
-        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick} iconState={iconState} setIcon={setIcon} headname='About' loopVal={About}/>
-        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick} iconState={iconState} setIcon={setIcon} headname='Projects' loopVal={Projects} />
-        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick} iconState={iconState} setIcon={setIcon} headname='Blogs' loopVal={Blogs} />
+        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick}  headname='About' loopVal={About} borderId={borderId} setBorderId={setBorderId}/>
+        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick}  headname='Projects' loopVal={Projects} borderId={borderId} setBorderId={setBorderId} />
+        <KnowMe setSelected={setSelected} selected={selected} handleClick={handleClick}  headname='Blogs' loopVal={Blogs} borderId={borderId} setBorderId={setBorderId} />
         </>
 
     )
@@ -114,29 +137,30 @@ const GettoKnowMe = () => {
 
 
 
-const KnowMe =({setSelected,selected,handleClick,iconState,setIcon,headname,loopVal}) => {
+const KnowMe =({setSelected,selected,handleClick,headname,loopVal,borderId,setBorderId}) => {
 
     
 
-    
+    const [borderCol,setBorderCol]=useState(false)
 
     return (
    <Box>  
-   <LinkBox _hover={{bg:`${iconState?'':'sidebar.texthov'}`}} onClick={()=>{
-    setIcon(!(iconState))
+   <LinkBox _hover={{bg:`${borderId===headname?'':'sidebar.texthov'}`}} onClick={()=>{
+  
+   setBorderId(headname)
     setSelected={setSelected}
    
-}} border={iconState && !(selected)?`1px solid #40a7ed`:''}  
+}} border={borderId===headname && !(selected)?`1px solid #40a7ed`:''}  
 
    >
    <LinkOverlay>
    <HStack >
-        {iconState?<VscChevronDown/>:<VscChevronRight/>}<Text fontSize='18px'>{headname}</Text>
+        {borderId===headname?<VscChevronDown/>:<VscChevronRight/>}<Text fontSize='18px'>{headname}</Text>
     </HStack>
    </LinkOverlay>
    </LinkBox>
 
-   {(iconState) && 
+   {(borderId===headname) && 
         <Box >
      <List>
         {
@@ -161,7 +185,7 @@ const KnowMe =({setSelected,selected,handleClick,iconState,setIcon,headname,loop
                                <HStack>
                                 {selected == menu.heading?<VscChevronDown/>:<VscChevronRight/>}
                                 
-                                <Text>{menu.heading}</Text>
+                                <Text fontSize='15px'>{menu.heading}</Text>
                                 
 
                                 </HStack>
@@ -172,12 +196,12 @@ const KnowMe =({setSelected,selected,handleClick,iconState,setIcon,headname,loop
 
                               {selected == menu.heading ? <Box paddingX='25px'>
                                 <HStack >
-                                  {menu.line && <VscChevronRight/>}  
-                                <Text color='white'>{menu.line}</Text>
+                                  {/* {menu.line && <VscChevronRight/>}   */}
+                                <Text noOfLines={3} color='white'>{menu.line}</Text>
                                 </HStack>
                                 <HStack >
-                                  {menu.lineCurrent && <VscChevronRight/>}  
-                                <Text color='white'>{menu.lineCurrent}</Text>
+                                  {/* {menu.lineCurrent && <VscChevronRight/>}   */}
+                                <Text noOfLines={3} color='white'>{menu.lineCurrent}</Text>
                                 </HStack>
                                
                               </Box>:''
