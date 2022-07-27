@@ -26,7 +26,7 @@ import { Text } from '@chakra-ui/layout';
 
 // import FloxusLogo from  '../../public/favicon_floxus.png' 
 
-const About = [
+export const About = [
     {
         id:1,
         heading:'Who Am I',

@@ -35,7 +35,7 @@ const theme = extendTheme({
   },
   colors:{
     editor:{
-      bg:"1e1e1e",
+      bg:"#1e1e1e",
       fg:"#d4d4d4",
       sel:'#add6ff',
       text:'#c1c1c1',
