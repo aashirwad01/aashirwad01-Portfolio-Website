@@ -7,15 +7,23 @@ import {
     Text,
     Stack,
     Button,
+    Divider,
     Link,
     Badge,
     VStack,
     useBreakpointValue,
     keyframes,
-    HStack
+    HStack,
+    LinkBox,
+    LinkOverlay
   } from '@chakra-ui/react';
   import NextLink from 'next/link'
  import Image from 'next/image'
+
+import {ImLinkedin,ImGithub,ImTwitter} from 'react-icons/im'
+import KnowmeProjectsandBlogs from '../editor/knowmeProjectsandBlogs'
+import KnowMeProjectsandBlogs from '../editor/knowmeProjectsandBlogs';
+
   const workingAt=
 {
     heading:'Working At',
@@ -40,19 +48,19 @@ const internAt=
 
 const KnowmeEditor = () =>  {
   return (
-    <Box paddingX='5vw'>
-      <Box>
-    <Box flexDirection={{ base: 'column', md: 'row' }}  paddingTop='10vh' paddingX='10vw' display='flex' alignItems='center' justifyContent='center'    >
+    <Box  >
+      <Box paddingX='5vw'>
+    <Box   flexDirection={{ base: 'column-reverse', xl: 'row' }}  paddingTop= {{base:'3vh',lg:'10vh'} } paddingX={{base:'1vw',lg:'5vw'}} display='flex' alignItems={{ base: 'center',sm:'center',md:'',lg:'', xl: 'center' }} justifyContent='center'  flexWrap='wrap'   >
 
       <Box marginRight='2vw' >
-      <Heading color='blue.400' fontSize='70px'  fontFamily={'body'}>
+      <Heading color='blue.400' fontSize={{base:'50px',lg:'70px'} }  fontFamily={'body'}>
           Who Am I
         </Heading>
-        <Text color='white' fontSize='35px' fontWeight={600}  mb={1}>
+        <Text color='white' fontSize={{base:'25px',lg:'35px'} } fontWeight={600}  mb={1}>
           Aashirwad Kumar
         </Text>
         <Text
-         fontSize='25px'
+         fontSize={{base:'20px',lg:'25px'} }
           color='gray.400'
          >
           An Abnormaly Curious Guy.
@@ -72,13 +80,13 @@ const KnowmeEditor = () =>  {
         />
         <Box>
         <Text
-         fontSize='20px'
+       fontSize={{base:'15px',lg:'20px'} }
           color='gray.400'
          >
           Studying Imsc Mathematics and Computing at BIT Mesra,Ranchi
         </Text>
         <Text
-         fontSize='18px'
+        fontSize={{base:'15px',lg:'20px'} }
           color='gray.400'
          >
           2018-Current
@@ -111,7 +119,7 @@ const KnowmeEditor = () =>  {
          {workingAt.timeline} 
         </Text>
         
-        <Stack   direction={'row'} mt={2}>
+        <Stack  direction= {{base:'column',sm:'row'} } mt={2}>
           <Badge
             px={2}
             py={1}
@@ -153,7 +161,8 @@ const KnowmeEditor = () =>  {
          {internAt.company1} 
         </Text>
         </HStack>
-        <Stack   direction={'row'} mt={2}>
+        <Stack   direction= {{base:'column',sm:'row'} } mt={2}>
+          
           <Badge
             px={2}
             py={1}
@@ -161,6 +170,7 @@ const KnowmeEditor = () =>  {
             fontWeight={'400'}>
             Video Analysis
           </Badge>
+          
           <Badge
             px={2}
             py={1}
@@ -185,7 +195,7 @@ const KnowmeEditor = () =>  {
          {internAt.company2} 
         </Text>
         </HStack>
-        <Stack   direction={'row'} mt={2}>
+        <Stack mb='2vh'   direction= {{base:'column',sm:'row'} } mt={2}>
           <Badge
             px={2}
             py={1}
@@ -215,7 +225,7 @@ const KnowmeEditor = () =>  {
      
       <Box
         maxW={'520px'}
-       
+      
         bg='gray.900'
         boxShadow={'2xl'}
         rounded={'lg'}
@@ -227,7 +237,7 @@ const KnowmeEditor = () =>  {
         <Avatar
           size={'xl'}
           src={
-            'https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+            'myimg.png'
           }
           alt={'Avatar Alt'}
           mb={4}
@@ -258,28 +268,52 @@ const KnowmeEditor = () =>  {
           
         </Text>
 
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        <Stack align={'center'} justify={'center'} direction='row' mt={6}>
+        <LinkBox>
+        <a
+         href='https://github.com/aashirwad01' target="_blank" rel="noopener noreferrer" >
+          <LinkOverlay>
+          
           <Badge
             px={2}
             py={1}
             bg= 'gray.100'
             fontWeight={'400'}>
-            #webd
+            <ImGithub/>
           </Badge>
+       </LinkOverlay>
+       </a>
+      </LinkBox>
+      <LinkBox>
+        <a
+         href='https://twitter.com/aashirwad_01' target="_blank" rel="noopener noreferrer" >
+          <LinkOverlay>
+          
           <Badge
             px={2}
             py={1}
             bg= 'gray.100'
             fontWeight={'400'}>
-            #analysis
+            <ImTwitter/>
           </Badge>
+       </LinkOverlay>
+       </a>
+      </LinkBox>
+      <LinkBox>
+        <a
+         href='https://www.linkedin.com/in/aashirwadkumar159/' target="_blank" rel="noopener noreferrer" >
+          <LinkOverlay>
+          
           <Badge
             px={2}
             py={1}
             bg= 'gray.100'
             fontWeight={'400'}>
-            #coding
+           <ImLinkedin/>
           </Badge>
+       </LinkOverlay>
+       </a>
+      </LinkBox>
         </Stack>
 
         <Stack mt={8} direction={'row'} spacing={4}>
@@ -316,11 +350,15 @@ const KnowmeEditor = () =>  {
           </NextLink>
         </Stack>
       </Box>
+      <Divider marginY='3vh' color='blue.400'/>
       </Box>
+      <Box>
 
-      
+      <KnowMeProjectsandBlogs/>
+      </Box>
             
             </Box>
+            
       </Box>
 
       

@@ -16,7 +16,7 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
         const postsVal = [
           {
             "_id": "62e0ecda657a4fae5a0e67e4",
-            coverImage: "https://cdn.hashnode.com/res/hashnode/image/upload/v1658907656100/byYOQQYW6.png",
+            coverImage: '/webpack.png',
             "slug": "what-is-webpack-and-what-are-modules",
             title: "What is WebPack and What are Modules?",
             brief: "Why WebPack?🕸️\nWhat problem does it solve?🧐\nIn its broadest definition: WebPack is a bundler, a module bundler. 😼\nWhat it basically does is bundles all assets and files. 💪\nTo understand why WebPack is necessary, it is important to know How was Ja...",
@@ -25,7 +25,7 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
           },
           {
             "_id": "62e0eab8657a4fae5a0e678f",
-            coverImage: "https://cdn.hashnode.com/res/hashnode/image/unsplash/jLwVAUtLOAQ/upload/v1658907351098/WtwmLDp__.jpeg",
+            coverImage: "theming.png",
             "slug": "theming-in-mui-v5",
             title: "Theming in MUI v5",
             brief: "Material-UI is now MUI! 🤩\nIf you are following Frontend for some time you might already know the migration of Material UI brand to MUI.\nAnd Yes! I am copying the direct heading from the announcement made by the team behind MUI on 16 Sept 2021 of a n...",
@@ -34,7 +34,7 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
           },
           {
             "_id": "62e0e6437d685aae7f94e227",
-            coverImage: "https://cdn.hashnode.com/res/hashnode/image/unsplash/g5jpH62pwes/upload/v1658907409772/ZiMr_YCOt.jpeg",
+            coverImage: "jsarray.png",
             "slug": "javascript-array-methods-detailed-review-of-foreach-map-filter-and-reduce",
             title: "Javascript Array Methods         Detailed Review of forEach() ,map , filter() and reduce()",
             brief: "Let’s first understand 🤔 What is an Array?\nQuoting from MDN directly.\n\nThe Array object, as with arrays in other programming languages, enables storing a collection of multiple items under a single variable name and has members for performing common...",

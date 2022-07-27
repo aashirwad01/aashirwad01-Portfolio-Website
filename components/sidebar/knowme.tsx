@@ -26,7 +26,7 @@ import { Text } from '@chakra-ui/layout';
 
 // import FloxusLogo from  '../../public/favicon_floxus.png' 
 
-export const About = [
+const About = [
     {
         id:1,
         heading:'Who Am I',
@@ -118,7 +118,7 @@ const GettoKnowMe = () => {
       };
 
   
-    const [borderId,setBorderId]=useState('About')
+    const [borderId,setBorderId]=useState('')
 
        
 
