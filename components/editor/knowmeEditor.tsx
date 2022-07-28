@@ -317,7 +317,7 @@ const KnowmeEditor = () =>  {
         </Stack>
 
         <Stack mt={8} direction={'row'} spacing={4}>
-          <NextLink href='/projects'>
+          <NextLink href='/blogs'>
           <Button
             flex={1}
             fontSize={'sm'}
@@ -329,7 +329,7 @@ const KnowmeEditor = () =>  {
             All Blogs
           </Button>
           </NextLink>
-          <NextLink href='/blogs'>
+          <NextLink href='/projects'>
           <Button
             flex={1}
             fontSize={'sm'}

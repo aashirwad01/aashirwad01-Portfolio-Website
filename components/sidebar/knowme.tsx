@@ -76,6 +76,14 @@ const Projects =[
         tag:'Shopify,Liquid,HTML,CSS and UI/UX Design Principles',
 
     },
+    {
+        id:3,
+        heading:'CricNews Telegram Bot',
+        timeline:"",
+        tag:'',
+        lineCurrent:'Javascript, NodeJS, Telegraf',
+        line:'Created Telegram Bot Server using Telegraf and NodeJs to handle APIs using axios and created bot commands for Telegram using Telegraf to fetch daily Cricket updates.Implemented FlexBox CSS and fetch , async , await and DOM Manipulation to make a Dynamic Website to daily update Cricket News from around the world'
+      },
     
     
 ]
