@@ -39,7 +39,8 @@ const theme = extendTheme({
       fg:"#d4d4d4",
       sel:'#add6ff',
       text:'#c1c1c1',
-      headg:'#2f90ff'
+      headg:'#2f90ff',
+      bgi:`linear-gradient(rgba(30,30,30,0.7), rgba(30,30,30,0.9)),url("./editorpro.png")`,
 
 
 

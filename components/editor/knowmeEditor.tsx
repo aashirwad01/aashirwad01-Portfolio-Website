@@ -350,10 +350,10 @@ const KnowmeEditor = () =>  {
           </NextLink>
         </Stack>
       </Box>
-      <Divider marginY='3vh' color='blue.400'/>
+     
       </Box>
       <Box>
-
+      <Divider marginY='3vh' color='blue.400'/>
       <KnowMeProjectsandBlogs/>
       </Box>
             
