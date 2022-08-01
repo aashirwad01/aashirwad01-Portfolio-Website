@@ -74,8 +74,8 @@ export default function ProjectEditor({res,passVal}) {
                {passVal[0]?.about}
                 </Text>
                 <HStack >
-                {passVal[0].githubLink &&<a  href={passVal[0]?.githubLink}>   <Box  fontSize='14px' borderRadius='0' padding='1' backgroundColor='blue.600'>Github</Box></a>}
-                {passVal[0].liveLink && <a  href={passVal[0]?.liveLink}>   <Box  fontSize='14px' borderRadius='0' padding='1' backgroundColor='blue.600'>Live</Box></a>}
+                {passVal[0].githubLink &&<a target="_blank" rel="noopener noreferrer"  href={passVal[0]?.githubLink}>   <Box  fontSize='14px' borderRadius='0' padding='1' backgroundColor='blue.600'>Github</Box></a>}
+                {passVal[0].liveLink && <a target="_blank" rel="noopener noreferrer"  href={passVal[0]?.liveLink}>   <Box  fontSize='14px' borderRadius='0' padding='1' backgroundColor='blue.600'>Live</Box></a>}
                
                 </HStack>
                 <Text>

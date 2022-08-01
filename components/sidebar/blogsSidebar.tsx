@@ -84,8 +84,8 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 
 
-export default  function BlogsSidebar({ posts }){
-  const [selected,setSelected]=React.useState('')
+export default  function BlogsSidebar({ selectedBlog , setSelectedBlog }){
+  // const [selectedBlog,setSelectedBlog]=React.useState('')
   const [Searchvalue, setSearchValue] = React.useState('')
   const handleChange = (event) => {
     console.log(event.target.value)
@@ -97,7 +97,7 @@ export default  function BlogsSidebar({ posts }){
 
   const handleClick = (heading) => {
        
-    setSelected(heading !== selected ? heading : "") 
+    setSelectedBlog(heading !== selectedBlog ? heading : "") 
   };
   var blogslooped= postsVal.filter(e => e.title.toLowerCase().includes(Searchvalue.toLowerCase()))
  
@@ -125,7 +125,7 @@ export default  function BlogsSidebar({ posts }){
   />
 
 
-        <BlogsSidebarComponent handleClick={handleClick} selected={selected} headname='BLOGS' loopVal={blogslooped} />
+        <BlogsSidebarComponent handleClick={handleClick} selectedBlog={selectedBlog} headname='BLOGS' loopVal={blogslooped} />
       
         </>
    
@@ -173,7 +173,7 @@ export async function getStaticProps(context) {
 
 
 
-function BlogsSidebarComponent({handleClick,selected,headname,loopVal}) {
+function BlogsSidebarComponent({handleClick,selectedBlog,headname,loopVal}) {
   
  
   return (
@@ -200,8 +200,8 @@ function BlogsSidebarComponent({handleClick,selected,headname,loopVal}) {
                               key={menu.title} 
                               onClick={() => handleClick(menu.title)}  
                             >
-                              <LinkBox border={selected == menu.title ?`1px solid #40a7ed`:""}
-                              bg={selected == menu.title ?`sidebar.textsel`:""}
+                              <LinkBox border={selectedBlog == menu.title ?`1px solid #40a7ed`:""}
+                              bg={selectedBlog == menu.title ?`sidebar.textsel`:""}
                               
                               _hover={{bg:`sidebar.texthov`}}  >
                              

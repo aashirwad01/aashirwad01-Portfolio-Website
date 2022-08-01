@@ -41,8 +41,8 @@ const theme = extendTheme({
       sel:'#add6ff',
       text:'#c1c1c1',
       headg:'#2f90ff',
-      bgi:`linear-gradient(rgba(30,30,30,1), rgba(30,30,30,1)),url("./editorpro.png")`,
-
+      bgiProject:`linear-gradient(rgba(30,30,30,1), rgba(30,30,30,1)),url("./editorbg.png")`,
+      bgiBlog:`linear-gradient(rgba(30,30,30,1), rgba(30,30,30,0.9)),url("./editorblog.png")`,
 
 
     },
@@ -90,10 +90,11 @@ const theme = extendTheme({
 
 const MyApp = ({ Component, pageProps }) => {
   const [selectedProject,setSelectedProject]=React.useState('Diary App')
+  const [selectedBlog,setSelectedBlog]=React.useState('What is WebPack and What are Modules?')
   return (
   <ChakraProvider theme={theme}>
-  <PortfolioLayout selectedProject={selectedProject} setSelectedProject={setSelectedProject}>
-  <Component {...pageProps} selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
+  <PortfolioLayout selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog} setSelectedBlog={setSelectedBlog}  >
+  <Component {...pageProps} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog}   />
   </PortfolioLayout>
   </ChakraProvider>
   )

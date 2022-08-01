@@ -11,7 +11,7 @@ import GithubStatsSidebar from './sidebar/githubStatsSidebar'
 
 
 
-const Sidebar = ({selected , selectedProject,setSelectedProject}) => {
+const Sidebar = ({selected , selectedProject,setSelectedProject,selectedBlog,setSelectedBlog}) => {
 
     const toViwewinSidebar = (selected) => {
         if(selected=='KNOW ME')
@@ -37,7 +37,7 @@ const Sidebar = ({selected , selectedProject,setSelectedProject}) => {
         }
         else if (selected =='BLOGS'){
             return (
-                <BlogsSideBar/>
+                <BlogsSideBar selectedBlog={selectedBlog} setSelectedBlog={setSelectedBlog} />
             )
         }
     }

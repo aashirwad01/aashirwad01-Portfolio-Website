@@ -7,7 +7,7 @@ import SideBorder from '../components/sideBorder'
 
 
 
-const PortfolioLayout = ({children,selectedProject,setSelectedProject}) => {
+const PortfolioLayout = ({children,selectedProject,setSelectedProject,selectedBlog,setSelectedBlog}) => {
    const [selected, setSelected] = useState('');
   
     return (
@@ -15,7 +15,7 @@ const PortfolioLayout = ({children,selectedProject,setSelectedProject}) => {
             <Box position='absolute' top='0' width='50px' left='0'>
                 <Box position='absolute' top='0' width='50px' >
                  <SideBorder selected={selected} setSelected={setSelected} />
-                 {selected && <Sidebar selectedProject={selectedProject} setSelectedProject={setSelectedProject} selected={selected} />}
+                 {selected && <Sidebar selectedBlog={selectedBlog} setSelectedBlog={setSelectedBlog} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selected={selected} />}
                 </Box>
                 
                 

@@ -114,7 +114,7 @@ const [readmeLinkSel,setReadmeLinksel] = React. useState('')
   
 
   return (
-    <Box height='calc(100vh - 22px)' bg={'editor.bgi'} overflowY='auto'>
+    <Box height='calc(100vh - 22px)' bg={'editor.bgiProject'} overflowY='auto'>
 <ProjectEditor passVal={passVal} res={localCache[selectedProject]}/>
       
     </Box>
