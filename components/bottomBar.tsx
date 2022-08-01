@@ -29,13 +29,13 @@ const BottomNav=[
     {
         name:"star on github",
         icon:VscSourceControl,
-        route:'/'
+        route:'https://github.com/aashirwad01/aashirwad01-Portfolio-Website'
 
 },
 {
     name:"made with Love by aashirwad01",
     icon:VscHeart,
-    route:'/'
+    route:'https://github.com/aashirwad01/'
 
 },
 
@@ -43,9 +43,9 @@ const BottomNav=[
 
 const BottomNav2 = [
     {
-        name:'Running on Typescript Next JS',
+        name:'Running on Typescript ',
         icon:VscSymbolNamespace,
-        route:'/'
+        route:'https://www.typescriptlang.org/'
     },
     {
         name:'Live At Here',
@@ -53,9 +53,9 @@ const BottomNav2 = [
         route:'/'
     },
     {
-        name:'Prettier',
+        name:'Next JS',
         icon:VscCheckAll,
-        route:'/'
+        route:'https://nextjs.org/'
     },
 
 ]
@@ -72,13 +72,13 @@ const BottomBar = () => {
                             <ListItem    _hover={{bg:'bottombar.bgsel'}}  key={menu.name} fontSize='13px' >
                               <LinkBox>
                              
-                              <NextLink href={menu.route} passHref>
+                              <a target="_blank" rel="noopener noreferrer" href={menu.route} >
                                 <LinkOverlay noOfLines={1}   color='bottombar.text' >
                                
                                 <ListIcon as={menu.icon} color ="currentcolor" />
                                {menu.name}
                                 </LinkOverlay>
-                              </NextLink>
+                              </a>
                             
                               </LinkBox>  
                             </ListItem>
@@ -95,13 +95,13 @@ const BottomBar = () => {
                         {BottomNav2.map(menu => (
                             <ListItem _hover={{bg:'bottombar.bgsel'}}  key={menu.name} fontSize='13px' >
                               <LinkBox>
-                              <NextLink href={menu.route} passHref>
+                              <a target="_blank" rel="noopener noreferrer" href={menu.route} >
                                 <LinkOverlay noOfLines={1}  color='bottombar.text' >
                                
                                 <ListIcon as={menu.icon} color ="currentcolor" />
                                {menu.name}
                                 </LinkOverlay>
-                              </NextLink>
+                              </a>
                               </LinkBox>  
                             </ListItem>
                         ))}

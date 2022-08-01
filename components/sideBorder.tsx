@@ -116,13 +116,17 @@ const SideBorder = ({selected,setSelected}) => {
                         {BottomMenu.map(menu => (
                             <ListItem key={menu.name} fontSize='25px' >
                               <LinkBox>
-                              <NextLink href={menu.route} passHref>
+                              { menu.name=='Connect With Me'?<NextLink href={menu.route} passHref>
                                 <LinkOverlay _hover={{color:'white' }} color='sideborder.icon' >
                                
                                 <ListIcon as={menu.icon} color ="currentcolor" />
                                
                                 </LinkOverlay>
-                              </NextLink>
+                              </NextLink> : <a target="_blank" rel="noopener noreferrer" href={menu.route} > <LinkOverlay _hover={{color:'white' }} color='sideborder.icon' >
+                               
+                               <ListIcon as={menu.icon} color ="currentcolor" />
+                              
+                               </LinkOverlay></a>}
                               </LinkBox>  
                             </ListItem>
                         ))}
