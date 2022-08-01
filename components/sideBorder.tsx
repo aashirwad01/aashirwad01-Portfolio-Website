@@ -69,7 +69,7 @@ const BottomMenu = [
     {
         name:'Github Star',
         icon:VscGithub,
-        route:'/'
+        route:'https://github.com/aashirwad01/aashirwad01-Portfolio-Website'
     },
 ]
 

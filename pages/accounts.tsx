@@ -1,7 +1,15 @@
+import { Box } from '@chakra-ui/layout'
 import React from 'react'
 
-export default function accounts() {
+const Accounts=()=> {
   return (
-    <div>accounts</div>
+
+    <Box color='white' height='calc(100vh - 22px)' bg={'editor.bgiProject'} overflowY='auto'>
+
+      aa
+    </Box>
+   
   )
 }
+
+export default Accounts;

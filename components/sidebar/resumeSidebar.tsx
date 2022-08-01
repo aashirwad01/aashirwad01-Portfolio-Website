@@ -3,7 +3,7 @@ import React from 'react'
 
 const ResumeSidebar = () => {
   return (
-    <div>resumeSidebar</div>
+    <div>My Resume</div>
   )
 }
 

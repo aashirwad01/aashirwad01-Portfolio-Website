@@ -33,10 +33,12 @@
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-file-viewer": "^1.2.1",
     "react-github-calendar": "^3.3.1",
     "react-howler": "^5.2.0",
     "react-icons": "^4.3.1",
     "react-markdown": "^8.0.3",
+    "react-pdf": "^5.7.2",
     "remark-gfm": "^3.0.1",
     "reset-css": "^5.0.1",
     "swr": "^1.1.1"
