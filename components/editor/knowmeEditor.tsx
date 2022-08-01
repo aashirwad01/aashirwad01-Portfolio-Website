@@ -73,7 +73,7 @@ const KnowmeEditor = () =>  {
           src={
             '/mesra.png'
           }
-          alt={'Avatar Alt'}
+          
          
           pos={'relative'}
           
@@ -239,7 +239,7 @@ const KnowmeEditor = () =>  {
           src={
             'myimg.png'
           }
-          alt={'Avatar Alt'}
+         
           mb={4}
           pos={'relative'}
           _after={{

@@ -208,7 +208,7 @@ const AllProjectandBlogsKnowMe =  ({sectionName,value}) => {
      <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
        <Avatar
          src='/myimage.png'
-         alt={'Author'}
+        
        />
        <Stack direction={'column'} spacing={0} fontSize={'sm'}>
          <Text color='gray.200' fontWeight={600}>Aashirwad Kumar</Text>
