@@ -2,6 +2,7 @@ import "reset-css";
 import {ChakraProvider,extendTheme} from "@chakra-ui/react"
 import PortfolioLayout from '../components/portfolioLayout';
 import "@fontsource/inconsolata";
+import React from "react";
 
 // "activityBarBadge.background": "#007acc",
 // 		"editor.background": "#1e1e1e",
@@ -40,7 +41,7 @@ const theme = extendTheme({
       sel:'#add6ff',
       text:'#c1c1c1',
       headg:'#2f90ff',
-      bgi:`linear-gradient(rgba(30,30,30,0.7), rgba(30,30,30,0.9)),url("./editorpro.png")`,
+      bgi:`linear-gradient(rgba(30,30,30,1), rgba(30,30,30,1)),url("./editorpro.png")`,
 
 
 
@@ -88,10 +89,11 @@ const theme = extendTheme({
 })
 
 const MyApp = ({ Component, pageProps }) => {
+  const [selectedProject,setSelectedProject]=React.useState('Diary App')
   return (
   <ChakraProvider theme={theme}>
-  <PortfolioLayout>
-  <Component {...pageProps} />
+  <PortfolioLayout selectedProject={selectedProject} setSelectedProject={setSelectedProject}>
+  <Component {...pageProps} selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
   </PortfolioLayout>
   </ChakraProvider>
   )

@@ -207,7 +207,7 @@ const AllProjectandBlogsKnowMe =  ({sectionName,value}) => {
      </Stack>
      <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
        <Avatar
-         src='/myimg.png'
+         src='/myimage.png'
          alt={'Author'}
        />
        <Stack direction={'column'} spacing={0} fontSize={'sm'}>

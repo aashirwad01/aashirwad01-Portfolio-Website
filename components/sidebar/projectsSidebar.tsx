@@ -1,6 +1,6 @@
 import {  Box, Center, HStack, LinkBox, LinkOverlay, List, ListIcon, ListItem, Text } from '@chakra-ui/layout'
 import {   Input } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   VscChevronRight,
   VscChevronDown,
@@ -16,7 +16,7 @@ const Personal = [
   {
     name:'Diary App',
     image: VscChevronRight,
-    imgval:"diary",
+    imgval:"/diary.png",
     at:'',
     tech:'React, Redux, Javascript, Material UI, Firebase',
     about:'Developed a CRUD Diary Webapp using React hosted on local server to update and retrieve daily entry from Firebase, implementing React Hooks, Redux State management and asynchronous data handling alongside Formik for forms in React.'
@@ -25,7 +25,7 @@ const Personal = [
   {
     name:'TodoList App',
     image: VscChevronRight,
-    imgval:"todo",
+    imgval:"/todo.png",
     at:'',
     tech:'Javascript, React, Redux, Javascript, Material UI, LocalStorage',
     about:'Designed and developed TodoList App with completed and important sections saving progress utilizing Redux and Middlewares in LocalStorage cache '
@@ -33,7 +33,7 @@ const Personal = [
   {
     name:'CodeEditor',
     image: VscChevronRight,
-    imgval:"codeditor",
+    imgval:"/codeditor.png",
     at:'',
     tech:'React,Material UI, Axios,Judge0, Monaco Editor',
     about:'React based CodeEditor with design using Figma and implemented using MUIv5 incorporating theme changeand other design principles.Used Monacio Editor by Microsoft to implement code editor features and incorportated 5 languages with intellisense support in Javascript.Using Axios to fetch results from Judge0 server API for code review and code compilation.'
@@ -41,7 +41,7 @@ const Personal = [
   {
     name:'CricNews Telegram Bot and Website',
     image: VscChevronRight,
-    imgval:"cric",
+    imgval:"/cric.png",
     at:'',
     tech:'Javascript, NodeJS, Telegraf',
     about:'Created Telegram Bot Server using Telegraf and NodeJs to handle APIs using axios and created bot commands for Telegram using Telegraf to fetch daily Cricket updates.Implemented FlexBox CSS and fetch , async , await and DOM Manipulation to make a Dynamic Website to daily update Cricket News from around the world'
@@ -54,7 +54,7 @@ const Company = [
   {
     name:'ClassyHippie Shopify Project',
     image: VscChevronRight,
-    imgval:"shopify_icon",
+    imgval:"/shopify_icon.png",
     at:'Floxus',
     tech:'Shopify,Liquid,HTML,CSS and UI/UX Design Principles',
     about:'Managed and Collaborated on Shopify E Commerce WebApp for client incorporating UI/UX practices and E-Commerce features.'
@@ -63,7 +63,7 @@ const Company = [
   {
     name:'Floxus Main Website',
     image: VscChevronRight,
-    imgval:"favicon_floxus",
+    imgval:"/favicon_floxus.png",
     at:'Floxus',
     tech:'React, GitHub, Redux ,  Material UI,  Firebase,  Figma,  Javascript',
     about:'Collaborated with team to develop website pages with dynamic UI components for Floxus Main Website using React and Material UI employing best UI/UX practices.'
@@ -71,15 +71,15 @@ const Company = [
   {
     name:'Social Distance Monitoring App',
     image: VscChevronRight,
-    imgval:"OpenCV",
+    imgval:"/OpenCV.png",
     at:'SNTI, Tata Steel',
     tech:'YOLO, Imagenet, Python, OpenCV',
     about:'Developed a service to identify distance between two objects in a Real Time Video.'
   }
 ]
 
-const ProjectsSidebar = () => {
-  const [selected,setSelected]=React.useState('')
+const ProjectsSidebar = ({selectedProject,setSelectedProject}) => {
+  // const [selectedProject,setSelectedProject]=React.useState('')
   const [Searchvalue, setSearchValue] = React.useState('')
   const handleChange = (event) => {
     console.log(event.target.value)
@@ -87,14 +87,16 @@ const ProjectsSidebar = () => {
   
   }
 
+  
+
   const handleClick = (heading) => {
        
-    setSelected(heading !== selected ? heading : "") 
+    setSelectedProject(heading !== selectedProject ? heading : "") 
   };
   var personallooped= Personal.filter(e => e.name.toLowerCase().includes(Searchvalue.toLowerCase()))
   var companylooped=Company.filter(e => e.name.toLowerCase().includes(Searchvalue.toLowerCase()))
 
-  console.log(personallooped)
+  // console.log(selectedProject)
 
   return(
     <>
@@ -118,8 +120,8 @@ const ProjectsSidebar = () => {
   />
 
 
-        <ProjectsSidebarComponent handleClick={handleClick} selected={selected} headname='PERSONAL' loopVal={personallooped}/>
-        <ProjectsSidebarComponent handleClick={handleClick} selected={selected} headname='COMPANY' loopVal={companylooped}/>
+        <ProjectsSidebarComponent handleClick={handleClick} selectedProject={selectedProject} headname='PERSONAL' loopVal={personallooped}/>
+        <ProjectsSidebarComponent handleClick={handleClick} selectedProject={selectedProject} headname='COMPANY' loopVal={companylooped}/>
         </>
    
 
@@ -130,7 +132,7 @@ const ProjectsSidebar = () => {
 }
 
 
-function ProjectsSidebarComponent({handleClick,selected,headname,loopVal}) {
+function ProjectsSidebarComponent({handleClick,selectedProject,headname,loopVal}) {
   
   return (
     <Box>
@@ -156,8 +158,8 @@ function ProjectsSidebarComponent({handleClick,selected,headname,loopVal}) {
                               key={menu.name} 
                               onClick={() => handleClick(menu.name)}  
                             >
-                              <LinkBox border={selected == menu.name ?`1px solid #40a7ed`:""}
-                              bg={selected == menu.name ?`sidebar.textsel`:""}
+                              <LinkBox border={selectedProject == menu.name ?`1px solid #40a7ed`:""}
+                              bg={selectedProject == menu.name ?`sidebar.textsel`:""}
                               
                               _hover={{bg:`sidebar.texthov`}}  >
                              
@@ -167,9 +169,12 @@ function ProjectsSidebarComponent({handleClick,selected,headname,loopVal}) {
                                   <Box flexBasis='18%' paddingTop='5px'
                                   
                                   
-                                  ><Image   src={require('../../public/' +
+                                  >
+                                    {/* <Image   src={require('../../public/' +
         menu.imgval +
-        '.png').default}  alt='l'   /></Box>
+        '.png').default}  alt='l'   /> */}
+         <Image height='130px' width='130px' src={menu.imgval}/>
+        </Box>
                                
 
                                <Box paddingLeft='10px' display='flex' flexDirection='column' flexBasis='100%' >
