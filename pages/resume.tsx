@@ -15,7 +15,7 @@ Also i am assisting team in Product Development of Floxus Unbound Website.I have
 I enjoy challenging tasks and engaging with projects and teams which require me to work outside my comfort and acquire new knowledge and newer development techniques for the success of the organization.
 I am highly skilled in Data Structures and Algorithms and implementing them in development practices.I have also experience in troubleshooting and have conceptual understanding of software design principles .`
 
-const Resume = () => {
+const Resume = ({selected,setSelected}) => {
   const [isMobile] = useMediaQuery("(max-width: 768px)") 
 
   
@@ -37,7 +37,7 @@ const Resume = () => {
       <NextLink  href='/projects'>
 <Button
   flex={1}
- 
+  onClick={()=>setSelected('PROJECTS')}
   fontSize={'sm'}
   rounded={'full'}
   bg={'blue.400'}

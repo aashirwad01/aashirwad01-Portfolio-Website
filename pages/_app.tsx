@@ -89,12 +89,13 @@ const theme = extendTheme({
 })
 
 const MyApp = ({ Component, pageProps }) => {
+  const [selected, setSelected] = React.useState('');
   const [selectedProject,setSelectedProject]=React.useState('Diary App')
   const [selectedBlog,setSelectedBlog]=React.useState('What is WebPack and What are Modules?')
   return (
   <ChakraProvider theme={theme}>
-  <PortfolioLayout selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog} setSelectedBlog={setSelectedBlog}  >
-  <Component {...pageProps} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog}   />
+  <PortfolioLayout selected={selected} setSelected={setSelected} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog} setSelectedBlog={setSelectedBlog}  >
+  <Component {...pageProps} selected={selected} setSelected={setSelected} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog}   />
   </PortfolioLayout>
   </ChakraProvider>
   )

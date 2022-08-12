@@ -95,13 +95,14 @@ const Blogs =[
 
 
 
-const KnowMeProjectsandBlogs = () => {
+const KnowMeProjectsandBlogs = ({selected,setSelected}) => {
     return (
         <>
        <AllProjectandBlogsKnowMe sectionName='Project' value={Projects} />
        <Center marginY={10}>
        <NextLink href='/projects'>
           <Button
+           onClick={()=>setSelected('PROJECTS')}
           maxWidth='120px'
             flex={1}
             fontSize={'sm'}
@@ -125,6 +126,7 @@ const KnowMeProjectsandBlogs = () => {
        <Center marginY={10}>
        <NextLink href='/blogs'>
           <Button
+          onClick={()=>setSelected('BLOGS')}
            maxWidth='120px'
             flex={1}
             fontSize={'sm'}

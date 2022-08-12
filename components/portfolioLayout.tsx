@@ -7,8 +7,8 @@ import SideBorder from '../components/sideBorder'
 
 
 
-const PortfolioLayout = ({children,selectedProject,setSelectedProject,selectedBlog,setSelectedBlog}) => {
-   const [selected, setSelected] = useState('');
+const PortfolioLayout = ({selected, setSelected,children,selectedProject,setSelectedProject,selectedBlog,setSelectedBlog}) => {
+//    const [selected, setSelected] = useState('');
   
     return (
         <Box width='100vw' height='100vh'>

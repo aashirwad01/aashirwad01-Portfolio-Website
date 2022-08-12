@@ -46,7 +46,7 @@ const internAt=
 
  
 
-const KnowmeEditor = () =>  {
+const KnowmeEditor = ({selected,setSelected}) =>  {
   return (
     <Box  >
       <Box paddingX='5vw'>
@@ -319,6 +319,7 @@ const KnowmeEditor = () =>  {
         <Stack mt={8} direction={'row'} spacing={4}>
           <NextLink href='/blogs'>
           <Button
+           onClick={()=> setSelected('BLOGS')}
             flex={1}
             fontSize={'sm'}
             rounded={'full'}
@@ -331,6 +332,7 @@ const KnowmeEditor = () =>  {
           </NextLink>
           <NextLink href='/projects'>
           <Button
+          onClick={()=>setSelected('PROJECTS')}
             flex={1}
             fontSize={'sm'}
             rounded={'full'}
@@ -354,7 +356,7 @@ const KnowmeEditor = () =>  {
       </Box>
       <Box>
       <Divider marginY='3vh' color='blue.400'/>
-      <KnowMeProjectsandBlogs/>
+      <KnowMeProjectsandBlogs selected={selected} setSelected={setSelected}/>
       </Box>
             
             </Box>

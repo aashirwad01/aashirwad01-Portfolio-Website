@@ -6,7 +6,7 @@ import KnowmeEditor from '../components/editor/knowmeEditor'
 import knowmeEditor from '../components/editor/knowmeEditor'
 
 
-export default function Home() {
+export default function Home({setSelected,selected}) {
   return (
    
     <Box overflowY='auto'
@@ -14,7 +14,7 @@ export default function Home() {
     style={{ backgroundImage:`linear-gradient(rgba(30,30,30,1), rgba(30,30,30,0.9)),url("./editorbg.png")`   }}
     >
       
-   <KnowmeEditor/>
+   <KnowmeEditor setSelected={setSelected} selected={selected}/>
       </Box>
 
   )
