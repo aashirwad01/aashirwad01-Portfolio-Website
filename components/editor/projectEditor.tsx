@@ -88,7 +88,7 @@ export default function ProjectEditor({res,passVal}) {
     <Text >Readme</Text>
     <Divider marginBottom={5}/>
    
-
+   
    
    {res?<div>  <ReactMarkdown components={ChakraUIRenderer()}    remarkPlugins={[remarkGfm] } skipHtml >{res}</ReactMarkdown></div>:<><h1>No Data</h1></>}
   
