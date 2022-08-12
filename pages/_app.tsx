@@ -4,6 +4,8 @@ import PortfolioLayout from '../components/portfolioLayout';
 import "@fontsource/inconsolata";
 import React from "react";
 import Head from "next/head";
+import { LoadingScreen } from "../components/loadingScreen";
+
 
 // "activityBarBadge.background": "#007acc",
 // 		"editor.background": "#1e1e1e",
@@ -90,18 +92,26 @@ const theme = extendTheme({
 })
 
 const MyApp = ({ Component, pageProps }) => {
+
+  const [loading,setLoading] = React.useState(false)
   const [selected, setSelected] = React.useState('');
   const [selectedProject,setSelectedProject]=React.useState('Diary App')
   const [selectedBlog,setSelectedBlog]=React.useState('What is WebPack and What are Modules?')
+  // React.useEffect(() => {
+  //   setLoading(true);
+  // }, []);
   return (
-  <ChakraProvider theme={theme}>
+    <>
+    {!loading?<ChakraProvider theme={theme}>
     <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
   <PortfolioLayout selected={selected} setSelected={setSelected} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog} setSelectedBlog={setSelectedBlog}  >
   <Component {...pageProps} selected={selected} setSelected={setSelected} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog}   />
   </PortfolioLayout>
-  </ChakraProvider>
+  </ChakraProvider>:<LoadingScreen/>}
+  
+  </>
   )
 }
 
