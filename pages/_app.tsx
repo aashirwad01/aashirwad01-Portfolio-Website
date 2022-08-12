@@ -105,6 +105,8 @@ const MyApp = ({ Component, pageProps }) => {
     {!loading?<ChakraProvider theme={theme}>
     <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
+        <meta title="name" content='aashirwad01' />
+        <meta name="description" content="Aashirwad Kumar Portfolio Website. Made using Next JS and Typescript." />
       </Head>
   <PortfolioLayout selected={selected} setSelected={setSelected} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog} setSelectedBlog={setSelectedBlog}  >
   <Component {...pageProps} selected={selected} setSelected={setSelected} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog}   />
