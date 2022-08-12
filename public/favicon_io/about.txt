@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Fruktur
+- Font Author: Copyright (c) 2013, Sorkin Type Co (www.sorkintype.com eben@eyebytes.com) with Reserved Font Name 'Fruktur'
+- Font Source: http://fonts.gstatic.com/s/fruktur/v25/SZc53FHsOru5QYsMfz3GkUrS8DI.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

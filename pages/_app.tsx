@@ -3,6 +3,7 @@ import {ChakraProvider,extendTheme} from "@chakra-ui/react"
 import PortfolioLayout from '../components/portfolioLayout';
 import "@fontsource/inconsolata";
 import React from "react";
+import Head from "next/head";
 
 // "activityBarBadge.background": "#007acc",
 // 		"editor.background": "#1e1e1e",
@@ -94,6 +95,9 @@ const MyApp = ({ Component, pageProps }) => {
   const [selectedBlog,setSelectedBlog]=React.useState('What is WebPack and What are Modules?')
   return (
   <ChakraProvider theme={theme}>
+    <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
   <PortfolioLayout selected={selected} setSelected={setSelected} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog} setSelectedBlog={setSelectedBlog}  >
   <Component {...pageProps} selected={selected} setSelected={setSelected} selectedProject={selectedProject} setSelectedProject={setSelectedProject} selectedBlog={selectedBlog}   />
   </PortfolioLayout>
