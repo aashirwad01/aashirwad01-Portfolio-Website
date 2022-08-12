@@ -50,7 +50,7 @@ const BottomNav2 = [
     {
         name:'Live At Here',
         icon:VscBroadcast,
-        route:'/'
+        route:'https://get.tech/'
     },
     {
         name:'Next JS',
