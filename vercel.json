@@ -6,7 +6,7 @@
       "use": "@vercel/next",
       "config": {
         "nodeVersion": "20.x",
-        "installCommand": "npm install --legacy-peer-deps",
+        "installCommand": "npm cache clean --force && npm install --legacy-peer-deps --force",
         "buildCommand": "npm run build"
       }
     }
