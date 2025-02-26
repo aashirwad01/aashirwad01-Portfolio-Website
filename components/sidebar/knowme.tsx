@@ -30,31 +30,27 @@ const About = [
     {
         id:1,
         heading:'Who Am I',
-        line:'An Abnormly Curious Guy ',
-        lineCurrent:'Studying MnC At BIT Mesra',
-        timeline:'2018-Current',
-        tag:['Web Developer','Analyst','Coder']
-
+        line:'Aashirwad Kumar',
+        lineCurrent:'An Abnormaly Curious Guy',
+        timeline:'2018-2023',
+        tag:['Web Developer', 'Analyst', 'Coder', 'Technical Content Writer']
     },
     {
         id:2,
         heading:'Working At',
-        line:'Floxus.Co',
-        lineCurrent:'Student Developer',
-        timeline:'Feb 2022-Current',
-        tag:['Web Development','Shopify Development','Automation','Blog Writing'],
-        // companyicon:'/favicon_floxus.png'
+        line:'Fastenal IDC',
+        lineCurrent:'Software Developer (Full Stack Developer)',
+        timeline:'Jan 2023-Present',
+        tag:['Spring Boot', 'React', 'Microservices', 'Azure']
     },
     {
         id:3,
         heading:'Interned At',
-        line:'SNTI, TATA Steel',
-        lineCurrent:'IIT Indore',
+        line:'Floxus',
+        lineCurrent:'SNTI, TATA Steel',
         timeline:'',
-        tag:'',
-        // companyicon:'/favicon_floxus.png'
-    },
-
+        tag:['Web Development', 'React', 'Node.js', 'Video Analysis', 'Python']
+    }
 ]
 
 const Projects =[
