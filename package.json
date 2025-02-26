@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-build": "prisma generate && next build"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
@@ -44,10 +45,7 @@
     "swr": "^1.1.1"
   },
   "devDependencies": {
-    "typescript": "4.5.5",
-    "@types/react": "17.0.37",
-    "@types/react-dom": "17.0.11",
-    "@types/node": "17.0.45",
+    "@types/react": "^17.0.37",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
     "babel-plugin-superjson-next": "^0.4.2",
