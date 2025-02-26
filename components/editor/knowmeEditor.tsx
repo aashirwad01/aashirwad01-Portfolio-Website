@@ -27,10 +27,10 @@ import KnowMeProjectsandBlogs from '../editor/knowmeProjectsandBlogs';
   const workingAt=
 {
     heading:'Working At',
-    line:'Floxus.Co',
-    lineCurrent:'Student Developer',
-    timeline:'Feb 2022-Current',
-    tag:'Web Development, Shopify Development, Automation, Blog Writing',
+    line:'Fastenal IDC',
+    lineCurrent:'Software Developer (Full Stack Developer)',
+    timeline:'Jan 2023-Present',
+    tag:'Spring Boot, React, Microservices, Azure',
    
 }
 const internAt=
@@ -83,13 +83,13 @@ const KnowmeEditor = ({selected,setSelected}) =>  {
        fontSize={{base:'15px',lg:'20px'} }
           color='gray.400'
          >
-          Studying Imsc Mathematics and Computing at BIT Mesra,Ranchi
+          Imsc Mathematics and Computing at BIT Mesra,Ranchi
         </Text>
         <Text
         fontSize={{base:'15px',lg:'20px'} }
           color='gray.400'
          >
-          2018-Current
+          2018-2023
         </Text>
         </Box>
         
@@ -104,7 +104,7 @@ const KnowmeEditor = ({selected,setSelected}) =>  {
          {workingAt.heading}:
         </Text>
         <HStack>
-          <Image src='/favicon_floxus.png' width={20} height={20}/>
+          <Image src='/fastenal_logo.png' width={60} height={20}/>
         <Text color='white' fontSize='25px' fontWeight={600}  mb={1}>
          {workingAt.line} 
         </Text>
@@ -123,31 +123,30 @@ const KnowmeEditor = ({selected,setSelected}) =>  {
           <Badge
             px={2}
             py={1}
-            bg= 'green.200'
+            bg= 'teal.200'
             fontWeight={'400'}>
-            Web Development
+            Spring Boot
           </Badge>
-          <Badge
-            px={2}
-            py={1}
-            bg= 'red.200'
-            fontWeight={'400'}>
-           Automation
-          </Badge>
-          
           <Badge
             px={2}
             py={1}
             bg= 'blue.200'
             fontWeight={'400'}>
-           Blog Writing
+            React
           </Badge>
           <Badge
             px={2}
             py={1}
-            bg= 'yellow.200'
+            bg= 'purple.200'
             fontWeight={'400'}>
-           Shopify Development
+            Microservices
+          </Badge>
+          <Badge
+            px={2}
+            py={1}
+            bg= 'cyan.200'
+            fontWeight={'400'}>
+            Azure
           </Badge>
         </Stack>
             </Box>
@@ -156,9 +155,9 @@ const KnowmeEditor = ({selected,setSelected}) =>  {
          {internAt.heading}:
         </Text>
         <HStack>
-          <Image src='/prashikshan_logo.png' width={20} height={20}/>
+          <Image src='/favicon_floxus.png' width={20} height={20}/>
         <Text color='white' fontSize='25px' fontWeight={600}  mb={1}>
-         {internAt.company1} 
+         Floxus 
         </Text>
         </HStack>
         <Stack   direction= {{base:'column',sm:'row'} } mt={2}>
@@ -166,50 +165,50 @@ const KnowmeEditor = ({selected,setSelected}) =>  {
           <Badge
             px={2}
             py={1}
-            bg= 'green.200'
-            fontWeight={'400'}>
-            Video Analysis
-          </Badge>
-          
-          <Badge
-            px={2}
-            py={1}
-            bg= 'red.200'
-            fontWeight={'400'}>
-          Python
-          </Badge>
-          
-          <Badge
-            px={2}
-            py={1}
             bg= 'blue.200'
             fontWeight={'400'}>
-           OpenCV
+            Web Development
+          </Badge>
+          
+          <Badge
+            px={2}
+            py={1}
+            bg= 'green.200'
+            fontWeight={'400'}>
+          React
+          </Badge>
+          
+          <Badge
+            px={2}
+            py={1}
+            bg= 'purple.200'
+            fontWeight={'400'}>
+           Node.js
           </Badge>
           
         </Stack>
         
         <HStack mt={5}>
-          <Image src='/iitindore.png' width={20} height={20}/>
+          <Image src='/prashikshan_logo.png' width={20} height={20}/>
         <Text color='white' fontSize='25px' fontWeight={600}  mb={1}>
-         {internAt.company2} 
+         {internAt.company1} 
         </Text>
         </HStack>
         <Stack mb='2vh'   direction= {{base:'column',sm:'row'} } mt={2}>
           <Badge
             px={2}
             py={1}
-            bg= 'red.200'
+            bg= 'teal.200'
            
             fontWeight={'400'}>
-            Kalman Filtering
+            Video Analysis
           </Badge>
           <Badge
             px={2}
             py={1}
-            bg= 'green.200'
+            bg= 'blue.200'
             fontWeight={'400'}>
-          Matlab
+          Python
           </Badge>
           
          
