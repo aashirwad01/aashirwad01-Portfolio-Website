@@ -28,7 +28,7 @@ import KnowMeProjectsandBlogs from '../editor/knowmeProjectsandBlogs';
 {
     heading:'Working At',
     line:'Fastenal IDC',
-    lineCurrent:'Software Developer (Full Stack Developer)',
+    lineCurrent:'Software Engineer (SDE 2) (Full Stack Developer)',
     timeline:'Jan 2023-Present',
     tag:'Spring Boot, React, Microservices, Azure',
    
