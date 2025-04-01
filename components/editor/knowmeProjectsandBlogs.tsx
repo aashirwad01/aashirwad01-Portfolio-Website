@@ -22,78 +22,8 @@ import {
 import React from 'react';
 
 import NextLink from 'next/link'
-
-const Projects =[
-    {
-        id:1,
-        image:'/codeditor.png',
-        url:'https://codeeditor-aashirwad01.vercel.app/',
-        urlG:'https://github.dev/aashirwad01/codeeditor',
-        heading:'CodeEditor',
-        line:'React based CodeEditor with design using Figma and implemented using MUIv5 incorporating theme changeand other design principles.Used Monacio Editor by Microsoft to implement code editor features and incorportated 5 languages with intellisense support in Javascript.Using Axios to fetch results from Judge0 server API for code review and code compilation.',
-        lineCurrent:'React,Material UI, Axios,Judge0, Monaco Editor',
-        timeline:'',
-        tag:''
-
-    },
-    {
-        id:2,
-        image:'/shopify_icon.png',
-        url:'https://www.getclassyhippie.com/',
-        urlG:'https://www.getclassyhippie.com/',
-        heading:'Classie Hippie Shopify Project for Client',
-        line:'Managed and Collaborated on Shopify E Commerce WebApp for client incorporating UI/UX practices and E-Commerce features.Developed features using Shopify Liquid and explored Hydrogen Framework. Used Shopify Apps to add option to wholesale discounts and create new theme. ',
-        lineCurrent:'Shopify,Liquid,HTML,CSS and UI/UX Design Principles',
-        timeline:'',
-        tag:'Shopify,Liquid,HTML,CSS and UI/UX Design Principles',
-
-    },
-    {
-      id:3,
-        heading:'CricNews Telegram Bot',
-        url:'https://cric-newsupdate.netlify.app/',
-        urlG:'https://github.dev/aashirwad01/telegrambot_live_cricketscores',
-        image:'/cric.png',
-        timeline:"",
-        tag:'',
-        lineCurrent:'Javascript, NodeJS, Telegraf',
-        line:'Created Telegram Bot Server using Telegraf and NodeJs to handle APIs using axios and created bot commands for Telegram using Telegraf to fetch daily Cricket updates.Implemented FlexBox CSS and fetch , async , await and DOM Manipulation to make a Dynamic Website to daily update Cricket News from around the world fetched from API hosted on Rapid API.'
-  },
-
-    
-    
-]
-
-const Blogs =[
-   
-     {
-        id:1,
-        image:'/webpack.png',
-        url:'https://aashirwad01.hashnode.dev/what-is-webpack-and-what-are-modules',
-        heading:"What is WebPack?",
-        lineCurrent:'WebPack, Modules, Javascript ',
-        line:"Why WebPack?🕸️\nWhat problem does it solve?🧐\nIn its broadest definition: WebPack is a bundler, a module bundler. 😼\nWhat it basically does is bundles all assets and files. 💪\nTo understand why WebPack is necessary, it is important to know How was Ja...",
-        timeline:"2022-07-27T07:44:26.565Z",
-        tag:''
-
-    },
-    {
-        id:2,
-        image:'/theming.png',
-        url:'https://aashirwad01.hashnode.dev/theming-in-mui-v5',
-        heading:"Theming in MUI v5",
-        lineCurrent:'MUI, React',
-        line:"Material-UI is now MUI! 🤩\nIf you are following Frontend for some time you might already know the migration of Material UI brand to MUI.\nAnd Yes! I am copying the direct heading from the announcement made by the team behind MUI on 16 Sept 2021 of a n...",
-        timeline:"2022-07-27T07:44:26.565Z",
-        tag:''
-
-    },
-    
-]
-
-
-
-
+import { Projects } from './Constants/knowMeProjects';
+import { Blogs } from './Constants/knowMeBlogs';
 
 const KnowMeProjectsandBlogs = ({selected,setSelected}) => {
     return (
