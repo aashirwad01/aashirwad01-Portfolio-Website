@@ -4,6 +4,7 @@ import ProjectEditor from '../components/editor/projectEditor'
 import useSWR from 'swr';
 
 import axios from "axios";
+import { fetcher } from '../components/Helper/helper';
 
 
 const ProjectsAll = [
@@ -101,9 +102,8 @@ const [readmeLinkSel,setReadmeLinksel] = React. useState('')
   }, [selectedProject])
 
  
-    const fetcher = async (url) => await axios.get(url).then((res) => res.data);
-   const { data, error } = useSWR(readmeLinkSel, fetcher);
-   var dts = data?.replaceAll('/blob' , '').replaceAll('github.com','raw.githubusercontent.com')
+  const { data, error } = useSWR(readmeLinkSel, fetcher);
+  var dts = data?.replaceAll('/blob' , '').replaceAll('github.com','raw.githubusercontent.com')
   localCache[selectedProject]= dts || `Loading`
 
    

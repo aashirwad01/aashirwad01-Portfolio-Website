@@ -22,8 +22,8 @@ import {
 import React from 'react';
 
 import NextLink from 'next/link'
-import { Projects } from './Constants/knowMeProjects';
-import { Blogs } from './Constants/knowMeBlogs';
+import { Projects } from '../Constants/knowMeProjects';
+import { Blogs } from '../Constants/knowMeBlogs';
 
 const KnowMeProjectsandBlogs = ({selected,setSelected}) => {
     return (
